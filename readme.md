@@ -1,13 +1,15 @@
-# lds
+# quasi
 
 A drop-in replacement for `np.random`:
 
 ```python
-import qm
+import quasi
 import numpy as np
 
+halton = quasi.Halton(100)
+
 x_rng = np.random.uniform(0, 1, (10, 100))
-x_lds = qp.halton.uniform(0, 1, (10, 100))
+x_lds = halton.uniform(0, 1, (10, 100))
 ```
 
 This library aims to make the low-discrepancy sequences (LDS) needed for quasi-monte carlo methods (QMC) more accessible. 
